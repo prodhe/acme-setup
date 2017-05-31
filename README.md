@@ -10,6 +10,10 @@ To see the viable system fonts (if one does not love the Bigelow & Holme's):
 
 	% fontsrv -p .
 
+Symlink ./plumbing to ~/lib/plumbing:
+
+	% mkdir -p ~/lib && ln -s ./plumbing ~/lib/plumbing
+
 Watch Russ Cox's excellent A Tour of Acme (https://research.swtch.com/acme) to get a glimpse at what Acme can do.
 
 Answer (in the words of Rob Pike): "Uhm... everything."
