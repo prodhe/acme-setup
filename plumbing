@@ -1,0 +1,17 @@
+# to update: cat $HOME/lib/plumbing | 9p write plumb/rules
+
+editor = acme
+include basic
+
+type is text
+data matches 'id:([a-zA-Z¡-￿0-9_\-=+./]+)@([a-zA-Z¡-￿0-9_\-./]+)
+plumb to showmail
+plumb start bash -c 'notmuch show $0 | plumb -i -d edit -a ''action=showdata filename=/nm/id/'$1@$2' '''
+
+# notmuch
+type is text
+data matches 'thread:([0-9abcdef]+)'
+plumb to showmail
+plumb start bash -c 'notmuch show $0 | plumb -i -d edit -a ''action=showdata filename=/nm/thread/'$1' '''
+
+
