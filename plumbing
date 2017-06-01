@@ -18,4 +18,4 @@ plumb start bash -c 'notmuch show $0 | plumb -i -d edit -a ''action=showdata fil
 type is text
 data matches '([a-fA-F0-9][a-fA-F0-9][a-fA-F0-9][a-fA-F0-9][a-fA-F0-9][a-fA-F0-9][a-fA-F0-9])'
 plumb to git
-plumb start rc -c 'git show '$1' | plumb -i -d edit -a ''action=showdata filename=/git/'$1'''
+plumb start rc -c 'cd '$wdir' && git show '$1' | plumb -i -d edit -a ''action=showdata filename='$wdir'/+git-'$1'''
