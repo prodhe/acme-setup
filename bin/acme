@@ -15,6 +15,7 @@ lfont=/lib/font/bit/lucm/euro.9.font
 tabstop=4
 
 plumber
+
 # exec $PLAN9/bin/acme -a -f $font -F $lfont $*
 exec $PLAN9/bin/acme -a -F $lfont $*
-# exec $PLAN9/bin/acme -a $*
+# exec $PLAN9/bin/acme -a $* &
