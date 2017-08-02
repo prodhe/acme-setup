@@ -3,6 +3,7 @@
 TERM=dumb
 SHELL=rc
 PAGER='col -b'
+GIT_EDITOR=editinacme
 fn cd { builtin cd $1 && awd $sysname }
 
 # font=/mnt/font/GoRegular/18a/font
