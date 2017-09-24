@@ -20,8 +20,3 @@ data matches '([a-fA-F0-9][a-fA-F0-9][a-fA-F0-9][a-fA-F0-9][a-fA-F0-9][a-fA-F0-9
 plumb to git
 plumb start rc -c 'cd '$wdir' && git show '$1' | plumb -i -d edit -a ''action=showdata filename='$wdir'/+git-'$1'''
 
-# work projects
-type is text
-data matches '(MYM|mym|ENG|eng)-([0-9]+)'
-plumb to web
-plumb start web https://adeprimo.atlassian.net/browse/$0
