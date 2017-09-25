@@ -38,9 +38,9 @@ exe 'hi! PmenuSel guibg='.s:green.' guifg='.s:white.' ctermbg=230 ctermfg=fg'
 exe 'hi! PmenuSbar guibg='.s:dark_green.' guifg='.s:black.' ctermbg=230 ctermfg=fg'
 exe 'hi! PmenuThumb guibg='.s:dark_yellow.' guifg='.s:black.' ctermbg=230 ctermfg=fg'
 
-exe 'hi! TabLineFill guibg='.s:pale_blue.' guifg='.s:pale_blue.' gui=NONE ctermbg=230 ctermfg=fg'
+exe 'hi! TabLineFill guibg='.s:pale_blue.' guifg='.s:pale_blue.' gui=NONE ctermbg=230 ctermfg=fg cterm=NONE'
 exe 'hi! TabLine guibg='.s:pale_blue.' guifg='.s:black.' gui=NONE ctermbg=230 ctermfg=fg'
-exe 'hi! TabLineSel guibg='.s:purple.' guifg='.s:white.' gui=NONE ctermbg=230 ctermfg=fg'
+exe 'hi! TabLineSel guibg='.s:purple.' guifg='.s:white.' gui=NONE ctermbg=230 ctermfg=fg cterm=NONE'
 
 " Syntax
 exe 'hi! Comment guibg=bg guifg='.s:dark_green.' gui=NONE ctermbg=bg ctermfg=236 cterm=NONE'
@@ -56,7 +56,7 @@ exe 'hi! SpecialKey guibg=bg guifg=fg gui=NONE ctermbg=bg ctermfg=fg cterm=NONE'
 exe 'hi! Directory guibg=bg guifg=fg gui=NONE ctermbg=bg ctermfg=fg cterm=NONE'
 exe 'hi! Error guibg='.s:red.' guifg='.s:white.' gui=NONE ctermbg=230 ctermfg=fg'
 
-exe 'hi! link Title StatusLine'
+exe 'hi! link Title TabLineSel'
 exe 'hi! link MoreMsg Comment'
 exe 'hi! link Question Comment'
 
