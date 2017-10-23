@@ -9,8 +9,4 @@ fn cd { builtin cd $1 && awd $sysname }
 # lfont=/lib/font/bit/lucm/euro.9.font
 lfont=/mnt/font/FiraCode-Regular/16a/font
 
-tabstop=4
-
-plumber
-
 exec $PLAN9/bin/acme -a -F $lfont $* &
