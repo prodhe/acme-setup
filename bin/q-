@@ -7,3 +7,4 @@ else
 fi
 
 sed "s|^$sign \(.*\)|\1|"
+
