@@ -6,7 +6,8 @@ PAGER='col -b'
 GIT_EDITOR=editinacme
 fn cd { builtin cd $1 && awd $sysname }
 
-# lfont=/lib/font/bit/lucm/euro.9.font
-lfont=/mnt/font/FiraCode-Regular/16a/font
+tabstop=4
+font=/lib/font/bit/lucm/euro.9.font
+lfont=/mnt/font/FiraCode-Regular/14a/font
 
 exec $PLAN9/bin/acme -a -F $lfont $* &
