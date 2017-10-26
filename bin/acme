@@ -1,5 +1,9 @@
 #!/usr/bin/env rc
 
+# Always isolate acme in a separate namespace. Plumbing outside of acme will not affect this instance.
+NAMESPACE=`{9 mktemp -d}
+9 plumber
+
 TERM=dumb
 SHELL=rc
 PAGER='col -b'
