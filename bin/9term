@@ -2,5 +2,6 @@
 
 SHELL=rc
 PAGER='col -b'
+tabstop=4
 
 exec $PLAN9/bin/9term -f /mnt/font/FiraCode-Regular/14a/font &
