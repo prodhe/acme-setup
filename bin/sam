@@ -1,0 +1,6 @@
+#!/usr/bin/env rc
+
+font=/lib/font/bit/lucsans/euro.8.font
+tabstop=4
+
+exec $PLAN9/bin/sam -a $* &

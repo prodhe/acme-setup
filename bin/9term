@@ -1,0 +1,6 @@
+#!/usr/bin/env rc
+
+SHELL=rc
+PAGER='col -b'
+
+exec $PLAN9/bin/9term -f /mnt/font/FiraCode-Regular/14a/font &
