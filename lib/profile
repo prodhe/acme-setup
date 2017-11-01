@@ -2,9 +2,10 @@ PAGER='col -b'
 tabstop=4
 ps1=' % '
 
-fn setprompt {
-	prompt=(`{pwd}^$ps1)
-}
-fn cd { builtin cd $1 && setprompt }
-
-prompt=(`{pwd}^$ps1)
+# not working
+#fn setprompt {
+#	prompt=(`{pwd}^$ps1)
+#}
+#fn cd { builtin cd $1 && setprompt }
+#
+#prompt=(`{pwd}^$ps1)
