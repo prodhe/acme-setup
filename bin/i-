@@ -1,0 +1,10 @@
+#!/bin/sh
+
+if [ -z $1 ]; then
+	char="	"
+else
+	char=$1
+fi
+
+sed "s|^$char\(.*\)|\1|"
+
