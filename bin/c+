@@ -6,5 +6,6 @@ else
 	sign=$1
 fi
 
-sed "s|.*|$sign &|"
+#sed "s|.*|$sign &|"
+ssam "x,^,i,$sign"
 
