@@ -10,9 +10,9 @@ To see the viable system fonts (if one does not love the Bigelow & Holme's):
 
 	% fontsrv -p .
 
-Symlink ./plumbing to ~/lib/plumbing:
+Symlink ./{plumbing, profile} to ~/lib/{plumbing, profile}:
 
-	% mkdir -p ~/lib && ln -s ./plumbing ~/lib/plumbing
+	% mkdir -p ~/lib && ln -s ./plumbing ~/lib/plumbing && ln -s ./profile ~/lib/profile
 
 Watch Russ Cox's excellent A Tour of Acme (https://research.swtch.com/acme) to get a glimpse at what Acme can do.
 
@@ -32,3 +32,7 @@ My fork: https://github.com/prodhe/plan9port
 The changes: https://github.com/9fans/plan9port/compare/master...prodhe:master
 
 Every now and then I merge from upstream to keep it up to date.
+
+## VIM colors
+
+`./vim/colors/acme.vim` is an acme colorscheme for vim.

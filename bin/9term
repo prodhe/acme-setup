@@ -2,5 +2,4 @@
 
 SHELL='rc'
 
-
-exec $PLAN9/bin/9term -f /mnt/font/FiraCode-Regular/14a/font rc -l &
+exec $PLAN9/bin/9term rc -l &

@@ -1,8 +1,11 @@
 #!/usr/bin/env rc
 
 # Always isolate acme in a separate namespace. Plumbing outside of acme will not affect this instance.
-NAMESPACE=`{9 mktemp -d}
-9 plumber
+#NAMESPACE=`{9 mktemp -d}
+
+# Run only one instance of plumber.
+p=`{pgrep plumber}
+if (~ $#p 0) plumber
 
 TERM=dumb
 SHELL=rc
@@ -11,7 +14,14 @@ GIT_EDITOR=editinacme
 fn cd { builtin cd $1 && awd $sysname }
 
 tabstop=4
-font=/lib/font/bit/lucm/euro.9.font
-lfont=/mnt/font/FiraCode-Regular/14a/font
+font=/usr/local/plan9/font/lucsans/unicode.8.font,/mnt/font/GoMono/16a/font
+lfont=/usr/local/plan9/font/lucm/unicode.9.font,/mnt/font/GoMono/16a/font
+#font=/mnt/font/FiraCode-Regular/15a/font
+#font=/mnt/font/GillSans/18a/font
+#font=/mnt/font/LucidaGrande/16a/font
+#font=/mnt/font/GoMono/16a/font
+#font=/mnt/font/Menlo-Regular/12a/font
+#lfont=/mnt/font/Menlo-Regular/17a/font
+#lfont=/mnt/font/GoMono/16a/font
 
-exec $PLAN9/bin/acme -a -F $lfont $* &
+exec $PLAN9/bin/acme -a -f $font -F $lfont $* &
