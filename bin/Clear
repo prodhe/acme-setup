@@ -1,0 +1,11 @@
+#!/usr/local/plan9/bin/rc
+# You could also write a bash script, the shell isn't important
+
+# acme sets "winid" in the environment to identify the window a command was run in, this just aborts if running in a different context
+[ -n $winid ] || exit 1
+
+# The "," addresses all text in the window, as normal
+echo -n , | 9p write acme/$winid/addr
+
+# Replace the addressed text with nothing
+echo -n | 9p write acme/$winid/data
